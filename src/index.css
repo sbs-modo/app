@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* some MODO styles.. move to components.. */
+
+body {
+  //padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  transform: none;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+tr:nth-child(even) {
+    //background-color: #ffdbdb;
+}
+
+th,td {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+@media screen and (max-width:768px) {
+    .sm-pull-right {
+        text-align: right;
+    }
+    background-color: red;
+}
+@media screen and (min-width: 600px) {
+  #header-image {
+    visibility: hidden;
+    clear: both;
+    //float: left;
+    //margin: 10px auto 5px 20px;
+    //width: 28%;
+    display: none;
+  }
+}
+
+/*
+text {
+    font: 12px sans-serif;
+}
+*/
+svg {
+    display: block;
+    height: 700px !important;
+    width: 100%;
+}
+
+.dashed {
+    stroke-dasharray: 5,5;
+}
+
+.wonGame {
+    background-color: limegreen
+}
+
+
+.lostGame {
+    background-color: tomato
+}
+
+.otGame {
+    background-color: lightgray
+}
