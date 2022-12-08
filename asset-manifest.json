@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sbs-modo/static/css/main.073c9b0a.css",
+    "main.js": "/sbs-modo/static/js/main.0089f8dc.js",
+    "static/js/787.0fd08b09.chunk.js": "/sbs-modo/static/js/787.0fd08b09.chunk.js",
+    "static/media/logo.svg": "/sbs-modo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/sbs-modo/index.html",
+    "main.073c9b0a.css.map": "/sbs-modo/static/css/main.073c9b0a.css.map",
+    "main.0089f8dc.js.map": "/sbs-modo/static/js/main.0089f8dc.js.map",
+    "787.0fd08b09.chunk.js.map": "/sbs-modo/static/js/787.0fd08b09.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.0089f8dc.js"
+  ]
+}
