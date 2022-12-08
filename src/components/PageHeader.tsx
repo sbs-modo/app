@@ -23,10 +23,10 @@ const PageHeader: FC = () => {
                 </div>
                 <div id="navi" className="collapse navbar-collapse">
                 <ul className="nav navbar-nav navbar-left">
-                    <li><a href="/joukkue" className="sm-pull-right">Joukkue</a></li>
-                    <li><a href="/pelit" className="sm-pull-right">Ottelut</a></li>
-                    <li><a href="/alltime" className="sm-pull-right"> All time</a></li>
-                    <li><a href="/yhteystiedot" className="sm-pull-right">Yhteystiedot</a></li>
+                    <li><a href="#/joukkue" className="sm-pull-right">Joukkue</a></li>
+                    <li><a href="#/pelit" className="sm-pull-right">Ottelut</a></li>
+                    <li><a href="#/alltime" className="sm-pull-right"> All time</a></li>
+                    <li><a href="#/yhteystiedot" className="sm-pull-right">Yhteystiedot</a></li>
                 </ul>
                 </div>
             </div>

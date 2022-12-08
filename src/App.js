@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import AllTime from "./components/AllTime";
@@ -9,7 +9,7 @@ import Games from "./components/Games";
 import PageHeader from "./components/PageHeader";
 import Players from "./components/Players";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Games />,
