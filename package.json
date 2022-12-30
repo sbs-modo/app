@@ -1,6 +1,6 @@
 {
-  "homepage": "http://jouni12.github.io/sbs-modo/",
-  "name": "sbs-modo",
+  "homepage": "http://sbs-modo.github.io/app/",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
