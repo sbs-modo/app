@@ -5,12 +5,9 @@ const Players: FC = () => {
 
     //const classes = useStyles();
 
-    return (
-        <>
-            <div className="div" style={{paddingLeft: '6%', paddingRight: '6%', paddingBottom: '10%'}}>
-            {allPlayers.map(player => {
-            return (
-                <div className="col xs-12">
+    const getPlayerRow = (player: any) => {
+        return (
+            <div className="col xs-12">
                     <a className="h4" href={"#playerdetails_" + player.playerID} data-toggle="collapse" title="Pelaajan tapahtumat" style={{cursor: 'pointer', padding: '2px'}}>
                         {player.jersey} {player.firstName} {player.lastName}
                     </a>
@@ -91,7 +88,19 @@ const Players: FC = () => {
                     </div>
                     </div>
                 </div>
-            )})}
+        )
+    }
+
+    return (
+        <>
+            <div className="div" style={{paddingLeft: '6%', paddingRight: '6%', paddingBottom: '10%'}}>
+            {allPlayers.filter(player => player.events.some(event => event.name === '2022-2023')).map(player => {
+                return getPlayerRow(player);
+            })}
+            <h3>Hall of Fame</h3>
+            {allPlayers.filter(player => !player.events.some(event => event.name === '2022-2023')).map(player => {
+                return getPlayerRow(player);
+            })}
             </div>
         </>
     );
