@@ -12,7 +12,7 @@ const Games: FC = () => {
                             <a href={"#event_details_" + event.name} data-toggle="collapse" title="Pelaajan tapahtumat" style={{cursor: "pointer", padding: "0px"}} className="h4">
                                 {event.name} - {event.serie}
                             </a>
-                            <div id={"event_details_" + event.name} className={event.name === "2021-2022" ? "collapse in" : "collapse out"}>
+                            <div id={"event_details_" + event.name} className={event.name === "2022-2023" ? "collapse in" : "collapse out"}>
                                 <div className="list-group">
                                     {event.games && event.games.length > 0 ? 
                                     event.games.map(game => 
