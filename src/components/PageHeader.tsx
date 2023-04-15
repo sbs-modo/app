@@ -16,7 +16,7 @@ const PageHeader: FC = () => {
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a href="/" className="navbar-brand">
+                    <a href="#/" className="navbar-brand">
                         <img src={process.env.PUBLIC_URL + "/modo_logo.jpg"} alt="logo" width="22" height="22" style={{float: "left"}}/>
                         <span style={{float: "left"}}>&nbsp;SBS MODO</span>
                     </a>
@@ -26,6 +26,7 @@ const PageHeader: FC = () => {
                     <li><a href="#/joukkue" className="sm-pull-right">Joukkue</a></li>
                     <li><a href="#/pelit" className="sm-pull-right">Ottelut</a></li>
                     <li><a href="#/alltime" className="sm-pull-right"> All time</a></li>
+                    <li><a href="#/records" className="sm-pull-right"> Ennätykset</a></li>
                     <li><a href="#/yhteystiedot" className="sm-pull-right">Yhteystiedot</a></li>
                 </ul>
                 </div>

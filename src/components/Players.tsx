@@ -24,9 +24,9 @@ const Players: FC = () => {
                                             (<span> {event.name} : 
                                             <b>GA</b> 
                                             <span>{event.goalsAgainst}</span>
-                                            <b>S</b>  
+                                            <b> S</b>  
                                             <span>{event.saves}</span>
-                                            <b>S%</b> :
+                                            <b> S%</b> :
                                             <span>{String((event.saves / (event.goalsAgainst + event.saves))*100).substr(0,5)}</span></span>)
                                         :
                                             <span> {event.name} : {event.goals} + {event.assists} = {event.points}</span>
@@ -36,7 +36,7 @@ const Players: FC = () => {
                                         <table width="100%" style={{paddingLeft: '2%', fontSize: '12px'}}>
                                             <thead style={{background: 'lightgrey'}}>
                                                 <tr>
-                                                    {player.role === "MV" ?
+                                                    {player.role === "MV" && event.saves > 0?
                                                     <>
                                                         <th>Päästetyt maalit</th>
                                                         <th>Torjunnat</th>
@@ -57,7 +57,7 @@ const Players: FC = () => {
                                                 {event.games.map((game: any) => {
                                                     return (
                                                         <tr>
-                                                            {player.role === "MV" ?
+                                                            {player.role === "MV" && event.saves > 0 ?
                                                             <>
                                                                 <td>{game.goalsAgainst}</td>
                                                                 <td>{game.saves}</td>

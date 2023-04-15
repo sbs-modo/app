@@ -8,6 +8,7 @@ import ContactInfo from "./components/ContactInfo";
 import Games from "./components/Games";
 import PageHeader from "./components/PageHeader";
 import Players from "./components/Players";
+import Records from "./components/Records";
 
 const router = createHashRouter([
   {
@@ -25,6 +26,10 @@ const router = createHashRouter([
   {
     path: "/alltime",
     element: <AllTime />,
+  },
+  {
+    path: "/records",
+    element: <Records />,
   },
   {
     path: "/yhteystiedot",
