@@ -94,11 +94,11 @@ const Players: FC = () => {
     return (
         <>
             <div className="div" style={{paddingLeft: '6%', paddingRight: '6%', paddingBottom: '10%'}}>
-            {allPlayers.filter(player => player.events.some(event => event.name === '2022-2023')).map(player => {
+            {allPlayers.filter(player => player.events.some(event => event.name === '2023-2024')).map(player => {
                 return getPlayerRow(player);
             })}
             <h3>Hall of Fame</h3>
-            {allPlayers.filter(player => !player.events.some(event => event.name === '2022-2023')).map(player => {
+            {allPlayers.filter(player => !player.events.some(event => event.name === '2023-2024')).map(player => {
                 return getPlayerRow(player);
             })}
             </div>

@@ -9,6 +9,8 @@ const Records: FC = () => {
     const mostGoals = allTime.roster.sort((a, b) => (a.goals > b.goals ? -1 : 1)).slice(0,TOP_LIST_SIZE);
     const mostAssists = allTime.roster.sort((a, b) => (a.assists > b.assists ? -1 : 1)).slice(0,TOP_LIST_SIZE);
 
+    allTime.roster.sort((a, b) => (a.points > b.points ? -1 : 1)) // sort by points so that records pages still in correct order..
+
     const seasonStats: any[] = [];
     allPlayers.map(player => player.events.forEach(playerSeason => seasonStats.push(
         {
