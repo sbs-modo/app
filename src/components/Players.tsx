@@ -91,14 +91,49 @@ const Players: FC = () => {
         )
     }
 
+    const getNextBirthday = () => {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Reset time part for accurate date comparison
+        const currentYear = today.getFullYear();
+        
+        // Find next birthday
+        const nextBirthday = allPlayers
+            .filter(player => player.events.some(event => event.name === '2024-2025'))
+            .map((player: any) => {
+                const dob = new Date(player.dateOfBirth);
+                let nextDate = new Date(currentYear, dob.getMonth(), dob.getDate());
+                
+                // If birthday has passed this year, use next year's date
+                if (nextDate < today) {
+                    nextDate = new Date(currentYear + 1, dob.getMonth(), dob.getDate());
+                }
+
+                return {
+                    ...player,
+                    nextBirthday: nextDate,
+                    daysUntil: Math.ceil((nextDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+                };
+            })
+            .sort((a, b) => a.daysUntil - b.daysUntil)[0];
+        
+        const birthdayDate = new Date(nextBirthday.dateOfBirth).toLocaleDateString();
+        return (
+            <div style={{padding: 8, border: 'solid 1px', borderRadius: 4, marginBottom:6, maxWidth: 400}}>
+                <div>{`Seuraavat synttärit ${nextBirthday.daysUntil} päivän päästä:`}</div>
+                <div>{`${nextBirthday.firstName} ${nextBirthday.lastName} (${birthdayDate})`}</div>
+            </div>
+        )
+    }
+
     return (
         <>
             <div className="div" style={{paddingLeft: '6%', paddingRight: '6%', paddingBottom: '10%'}}>
-            {allPlayers.filter(player => player.events.some(event => event.name === '2023-2024')).map(player => {
+            {getNextBirthday()}
+            {allPlayers.filter(player => player.events.some(event => event.name === '2024-2025')).map(player => {
                 return getPlayerRow(player);
             })}
             <h3>Hall of Fame</h3>
-            {allPlayers.filter(player => !player.events.some(event => event.name === '2023-2024')).map(player => {
+            {allPlayers.filter(player => !player.events.some(event => event.name === '2024-2025')).map(player => {
                 return getPlayerRow(player);
             })}
             </div>
