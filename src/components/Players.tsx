@@ -98,7 +98,7 @@ const Players: FC = () => {
         
         // Find next birthday
         const nextBirthday = allPlayers
-            .filter(player => player.events.some(event => event.name === '2024-2025'))
+            .filter(player => player.events.some(event => event.name === '2025-2026'))
             .map((player: any) => {
                 const dob = new Date(player.dateOfBirth);
                 let nextDate = new Date(currentYear, dob.getMonth(), dob.getDate());
@@ -129,11 +129,11 @@ const Players: FC = () => {
         <>
             <div className="div" style={{paddingLeft: '6%', paddingRight: '6%', paddingBottom: '10%'}}>
             {getNextBirthday()}
-            {allPlayers.filter(player => player.events.some(event => event.name === '2024-2025')).map(player => {
+            {allPlayers.filter(player => player.events.some(event => event.name === '2025-2026')).map(player => {
                 return getPlayerRow(player);
             })}
             <h3>Hall of Fame</h3>
-            {allPlayers.filter(player => !player.events.some(event => event.name === '2024-2025')).map(player => {
+            {allPlayers.filter(player => !player.events.some(event => event.name === '2025-2026')).map(player => {
                 return getPlayerRow(player);
             })}
             </div>
